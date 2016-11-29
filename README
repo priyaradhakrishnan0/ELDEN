@@ -5,8 +5,8 @@ Improving Entity Linking Performance of Sparsely Linked Entities And Knowledge B
 This package contains the following four folders. Run the system in the given order.
 
 A. Corpus :
-1. Wikipedia (cleaned as specified in paper) = Titles3.csv, gensimWord2vecModel.csv
-2. Web Corpus. = EDqueries.csv, evalEntitiesMap.txt, trainingEntities.py, processMultipleEntities.py, WebScraping.py
+1. Wikipedia (cleaned as specified in paper) 
+2. Web Corpus = trainingEntities.py, processMultipleEntities.py, WebScraping.py
 
 B. Dataset :
 1. TAC2010 = TACforNED
