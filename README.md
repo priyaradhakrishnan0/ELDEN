@@ -4,7 +4,9 @@ This software is the implementation of the paper "ELDEN: Improved Entity Linking
 <h2>Requirements</h2>
 
 Code is written in Python (2.7), Torch and Lua (Luajit)
+
 Using the pre-trained word2vec vectors from gensim will require downloading it from https://radimrehurek.com/gensim/models/word2vec.html
+
 Co-occurance matrix and other datafiles can be downloaded at https://www.dropbox.com/s/wqduqde7pv8cr76/ELDEN_Corpus.tar.gz?dl=0
 
 <h2>Running the models</h2>
@@ -21,23 +23,23 @@ Please cite the respective papers when using these datasets.
 
 C. Preprocess:
 1. Create entity co-location index. 
-     python2.7 pmi_index.py base_co.npy/None vocab.pickle output_file file_scraped_from_web
+     `python2.7 pmi_index.py base_co.npy/None vocab.pickle output_file file_scraped_from_web`
 2. Start PMI Server. 
-     python pmi_service.py
+     `python pmi_service.py`
 3. Train entity embeddings. 
-     th> main.lua <<word2vec.lua>>
+     `th> main.lua <<word2vec.lua>>`
 4. Start Embedding Distance Servers. 
-     th> EDServer.lua
+     `th> EDServer.lua`
 
 D. Entity Linker:
 1. Create train and test dataset
-     python createTrainData.py
+     `python createTrainData.py`
 2. Run Entity Linker
-     python classify.py
+     `python classify.py`
 
 E. Evaluation :
 1. Head entities versus tail entities statistics
-     python TailEntities.py
+     `python TailEntities.py`
 
 Kindly cite the paper if you are using the software 
 
